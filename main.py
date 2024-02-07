@@ -43,9 +43,11 @@ def index1():
 </html>"""
 
 
-@app.route('/promotion')
-def promotion():
-    return '<br />'.join(s)
+@app.route('/promotion_image')
+def promotion_image():
+    with open('index.html', 'r', encoding='utf8') as f:
+        return f.read()
+
 
 @app.route('/image_mars')
 def image_mars():
